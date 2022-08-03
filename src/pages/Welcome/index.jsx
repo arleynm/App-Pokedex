@@ -12,6 +12,7 @@ export function Welcome() {
   const handlePress = () => {
     navigation.navigate('Home');
   }
+  
 
   return (
     <S.Container>

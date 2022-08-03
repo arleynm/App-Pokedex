@@ -9,7 +9,7 @@ type Props = {
 
 
 export function Button({title} : Props){
-    return<S.Container>
+    return<S.Container >
             <S.Title>{title}</S.Title>
         </S.Container>
 }
