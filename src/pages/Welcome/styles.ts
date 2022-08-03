@@ -14,7 +14,7 @@ export const Content = styled.View`
 `;
 
 export const WapperAnimation = styled.View `
-    ${({theme}) => css ` 
+    ${({theme}) => css` 
         width: 200px;
         height: 300px;
         background-color: ${theme.colors.types.water};
