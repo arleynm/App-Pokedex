@@ -1,5 +1,5 @@
-import React from "react";
-import { TouchableOpacityProps } from "react-native";
+import React from 'react';
+import { TouchableOpacityProps } from 'react-native';
 import dotsImage from'../../assets/img/dots.png';
 import pokeball from '../../assets/img/pokeballCard.png';
 
