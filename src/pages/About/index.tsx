@@ -3,6 +3,8 @@ import { useRoute, useNavigation, useTheme } from "@react-navigation/native";
 import {ScrollView, Text} from "react-native";
 import api from "../../service/api";
 import { Alert } from "react-native";
+import { Feather } from '@expo/vector-icons'
+import circle from "../../assets/img/circle.png"
 
 type RouteParams={
     pokemonId: number;
@@ -21,7 +23,7 @@ type Ability= {
 
 }
 
-type TypeName =
+export type TypeName =
 | 'grass'
 | 'fire'
 | 'water'
@@ -78,5 +80,18 @@ export function About(){
     }, [])
 
 
-    return <ScrollView><ScrollView/>
+    return <ScrollView>
+        <S.header>
+            <S.BackButton>
+                <Feather name="chevrom-left" size={24} color= "#FFF"/>
+            </S.BackButton>
+
+        <S.ContentImage>
+            <S.CircleImage source={circle}/>
+            <S.PokemonImage source={{
+                uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`,
+                }}/>
+
+        </S.ContentImage>
+    </ScrollView>
 }
