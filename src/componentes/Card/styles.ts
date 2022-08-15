@@ -1,97 +1,100 @@
 import styled, { css } from "styled-components/native";
 
 interface PokemonType {
-    type: string;
+  type: "grass" | "fire" | "water" | "poison" | "bug" | "flying" | "eletric" | "ground";
 }
 
 export const PokemonCard = styled.TouchableOpacity<PokemonType>`
-    ${({ theme, type }) => css`
-        background: ${theme.colors.backgroundCard[type]};
-        border-radius: 10px;
-        margin-top: 30px;
-        flex-direction: row;
-        padding: 20px;
+  ${({ theme, type }) => css`
+    background: ${theme.colors.backgroundCard[type]};
+    border-radius: 10px;
+    margin-top: 40px;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-between;
+    height: 130px;
   `}
 `
 
-export const LeftSide  = styled.View`
-    width: 50;
-    position: relative;
+export const LeftSide = styled.View`
+  display: flex;
+  position: relative;
+  flex: 1;
+  justify-content: space-between;
 `
 
 export const ImageCardDetailLeftSide = styled.Image`
-    position: absolute;
-    width: 74px;
-    height: 32px;
-    left: 90px;
-    top: -10px;  
+  position: absolute;
+  width: 74px;
+  height: 32px;
+  left: 90px;
+  top: -10px;  
 `;
 
 
 export const PokemonName = styled.Text`
-    ${({theme}) => css `
-        font-weigth:bold;
-        font-size: 25px;
-        line-height: 31px;
-        magin-top: 5px;
-        text-transform: capitalize;
-        color: ${theme.colors.light_text};
-    `}
+  ${({ theme }) => css`
+    font-weight:bold;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: ${theme.colors.light_text};
+  `}
 `;
 
 
 export const PokemonId = styled.Text`
-    ${({theme}) => css `
-        font-weigth:bold;
-        font-size: 12px;
-        line-height: 14px;
-        color: ${theme.colors.light_text};
-    `}
+  ${({ theme }) => css`
+    font-weight:bold;
+    font-size: 16px;
+    color: ${theme.colors.light_text};
+  `}
 `;
 
 export const PokemonContentType = styled.Text`
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 `;
 
 export const PokemonType = styled.View<PokemonType>`
-    ${({theme, type}) => css `
-        backgroud-color: ${theme.colors.boxType[type]};
-        padding: 5px;
-        width: 65px;
-        height: 25px;
-        border-radius: 3px;
-        margin-left: 45px;
-        margin-top: 5px;
-        justify-content: center;
-        align-items: center;
-    `}
+  ${({ theme, type }) => css`
+    padding: 5px;
+    width: 65px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: ${theme.colors.boxType[type]};
+  `}
 `
 
 export const PokemonTypeText = styled.Text`
-     ${({theme}) => css `
-        font-weight = 500;
-        font-size = 12px;
-        line-height : 14px;
+     ${({ theme }) => css`
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
         color: ${theme.colors.text_white};
         text-transform: capitalize;
      `}
 `;
 
 export const RightSide = styled.View`
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    position: relative;
+  flex: .3;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 `;
 
 export const PokemonImage = styled.Image`
     margin-top: -30px;
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
 `;
 
 
 export const PokemonDetail = styled.Image`
-    position: absolute;
-    right: -20px;
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  right: -20;
 `
